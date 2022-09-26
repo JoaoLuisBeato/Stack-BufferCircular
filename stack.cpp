@@ -1,3 +1,5 @@
+//Pilha utilizando buffer circular
+
 #include <iostream>
 
 using namespace std;
@@ -53,7 +55,7 @@ public:
 	}
 
 	~Stack() {
-		cout << "Eu sou um destrutor" << endl;
+		// cout << "Eu sou um destrutor" << endl;
 		// Destrutor! Use para desalocar os dados criados com o new
 		delete[] array;
 	}
@@ -63,7 +65,6 @@ private:
 	int* array;
 	int indice;
 };
-
 
 int main() {
 	Stack pilha(20);
@@ -78,6 +79,5 @@ int main() {
 	pilha.pop();
 
 	pilha.print();
-
 	return 0;
 }
